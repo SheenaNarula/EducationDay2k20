@@ -1,3 +1,6 @@
+*, *::after, *::before{
+  box-sizing: border-box;
+}
 html,
     body,
     header,
@@ -71,11 +74,14 @@ html,
   .popup {
     margin: 70px auto;
     padding: 20px;
+    top: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 40vw;
+    width: 45vw;
+    height: 65vh;
     position: relative;
     transition: all 5s ease-in-out;
+    overflow-y: auto;
   }
   
   .popup h2 {
@@ -97,13 +103,11 @@ html,
     color: #06D85F;
   }
   .popup .content {
+    padding-bottom: 10px;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    word-wrap: break-word;
     word-break: break-all;
-    overflow: auto;
-    max-height: 400px;
   }
   
   @media screen and (max-width: 700px){
